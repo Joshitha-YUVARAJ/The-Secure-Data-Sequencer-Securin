@@ -105,3 +105,13 @@ Initially ambiguous
 -> **Standard is blocked only after High-Priority is present**
 
 -> **High-Priority can still enter if Standard is already inside**
+
+## Input:
+
+<img width="691" height="166" alt="image" src="https://github.com/user-attachments/assets/3960faed-dfad-48fd-ad73-a07e2c6bb391" />
+
+## Output:
+
+<img width="454" height="288" alt="image" src="https://github.com/user-attachments/assets/93661176-7631-443d-852a-caaa5bf2d676" />
+
+
