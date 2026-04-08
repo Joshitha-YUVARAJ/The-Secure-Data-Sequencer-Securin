@@ -1,6 +1,6 @@
 ## Secure Data Processing Sequencer
 
-**Approach**
+## Approach
 
 I approached the problem by simulating the real-world flow of Data Blocks through three stages:
 
@@ -74,7 +74,7 @@ A block with a Link ID:
 
 -> Prevents premature movement to the vault
 
-**Challenges Faced**
+## Challenges Faced
 
 **1. Handling Linked Blocks**
 
