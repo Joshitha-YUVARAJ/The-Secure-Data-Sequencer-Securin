@@ -1,6 +1,6 @@
 ## Secure Data Processing Sequencer
 
-** Approach**
+**Approach**
 
 I approached the problem by simulating the real-world flow of Data Blocks through three stages:
 
@@ -16,20 +16,21 @@ The system processes blocks one step at a time, ensuring all rules are followed 
 
 3. If neither move is possible, the system stops (invalid state)
 
-**specific data structures**
+**Specific Data Structures**
 
  **1.Queue (LinkedList)** for Input Queue
 
 → Maintains FIFO order.
 
 **2. ArrayList for Filter**
+
 → Easy iteration and conditional removal
 
 **3. ArrayList for Vault**
 
 → Simple storage of processed blocks
 
-These structures provide a balance between:
+**These structures provide a balance between:**
 
 1.Simplicity
 
