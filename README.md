@@ -1,6 +1,6 @@
 ## Secure Data Processing Sequencer
 
-**# Approach**
+** Approach**
 
 I approached the problem by simulating the real-world flow of Data Blocks through three stages:
 
@@ -48,30 +48,30 @@ Each rule was translated into conditions:
 Implemented using a loop that performs only one valid move per iteration
 
 **2. Filter Capacity Rule**
-
+```
 if (f.size() < 2)
-
+```
 Ensures no more than 2 blocks enter the filter.
 
 **3. Priority Rule**
-
+```
 if (!(hasHighPriority && incomingBlock is Standard))
+```
+-> If a High-Priority block exists in the filter:
 
-If a High-Priority block exists in the filter:
+-> Standard blocks are blocked from entering
 
-Standard blocks are blocked from entering
-
-High-Priority blocks are always allowed
+-> High-Priority blocks are always allowed
 
 **4. Link Rule**
-
+```
 if (countInFilter < 2 && stillInQueue)cannot move
-
+```
 A block with a Link ID:
 
-Must wait until its partner is also in the filter
+-> Must wait until its partner is also in the filter
 
-Prevents premature movement to the vault
+-> Prevents premature movement to the vault
 
 **Challenges Faced**
 
@@ -81,9 +81,9 @@ Ensuring one block waits for its partner
 
 **Solved by:**
 
-Counting matching blocks in filter.
+-> Counting matching blocks in filter.
 
-Checking if partner still exists in queue.
+-> Checking if partner still exists in queue.
 
 **2. Avoiding Infinite Loops**
 
@@ -91,9 +91,9 @@ Some cases may block all movements
 
 **Solved by:**
 
-Tracking if any move occurred in an iteration
+-> Tracking if any move occurred in an iteration
 
-If not → terminate with "invalid state"
+-> If not → terminate with "invalid state"
 
 **3. Correct Interpretation of Priority Rule**
 
@@ -101,6 +101,6 @@ Initially ambiguous
 
 **Clarified that:**
 
-**Standard is blocked only after High-Priority is present**
+-> **Standard is blocked only after High-Priority is present**
 
-**High-Priority can still enter if Standard is already inside**
+-> **High-Priority can still enter if Standard is already inside**
